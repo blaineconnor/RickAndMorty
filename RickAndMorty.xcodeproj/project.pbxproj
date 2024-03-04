@@ -13,6 +13,14 @@
 		F364A5092B90AAAF00DD55D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F364A5072B90AAAF00DD55D2 /* Main.storyboard */; };
 		F364A50B2B90AAB000DD55D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F364A50A2B90AAB000DD55D2 /* Assets.xcassets */; };
 		F364A50E2B90AAB000DD55D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F364A50C2B90AAB000DD55D2 /* LaunchScreen.storyboard */; };
+		F364A51D2B90ABD300DD55D2 /* RickAndMortyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F364A51C2B90ABD300DD55D2 /* RickAndMortyVC.swift */; };
+		F364A5202B90AC9000DD55D2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F364A51F2B90AC9000DD55D2 /* SnapKit */; };
+		F364A5242B90CE3F00DD55D2 /* RickAndMortyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F364A5232B90CE3F00DD55D2 /* RickAndMortyService.swift */; };
+		F364A5262B90CE5200DD55D2 /* RickAndMortyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F364A5252B90CE5200DD55D2 /* RickAndMortyModel.swift */; };
+		F364A5292B90D14400DD55D2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F364A5282B90D14400DD55D2 /* Alamofire */; };
+		F364A52C2B90D17100DD55D2 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = F364A52B2B90D17100DD55D2 /* AlamofireImage */; };
+		F37652762B91C39300F29ECD /* RickAndMortyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37652752B91C39300F29ECD /* RickAndMortyTVC.swift */; };
+		F3B86F502B91AE6F00AD6141 /* RickAndMortyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B86F4F2B91AE6F00AD6141 /* RickAndMortyVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,11 @@
 		F364A50A2B90AAB000DD55D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F364A50D2B90AAB000DD55D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F364A50F2B90AAB000DD55D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F364A51C2B90ABD300DD55D2 /* RickAndMortyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RickAndMortyVC.swift; path = RickAndMorty/Features/RickAndMorty/View/RickAndMortyVC.swift; sourceTree = SOURCE_ROOT; };
+		F364A5232B90CE3F00DD55D2 /* RickAndMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyService.swift; sourceTree = "<group>"; };
+		F364A5252B90CE5200DD55D2 /* RickAndMortyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyModel.swift; sourceTree = "<group>"; };
+		F37652752B91C39300F29ECD /* RickAndMortyTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyTVC.swift; sourceTree = "<group>"; };
+		F3B86F4F2B91AE6F00AD6141 /* RickAndMortyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F364A5292B90D14400DD55D2 /* Alamofire in Frameworks */,
+				F364A52C2B90D17100DD55D2 /* AlamofireImage in Frameworks */,
+				F364A5202B90AC9000DD55D2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +72,84 @@
 		F364A5002B90AAAF00DD55D2 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				F364A5162B90AB4000DD55D2 /* Features */,
+				F364A5152B90AB2100DD55D2 /* Core */,
+				F364A50C2B90AAB000DD55D2 /* LaunchScreen.storyboard */,
+				F364A50F2B90AAB000DD55D2 /* Info.plist */,
+			);
+			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		F364A5152B90AB2100DD55D2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
 				F364A5012B90AAAF00DD55D2 /* AppDelegate.swift */,
 				F364A5032B90AAAF00DD55D2 /* SceneDelegate.swift */,
 				F364A5052B90AAAF00DD55D2 /* ViewController.swift */,
 				F364A5072B90AAAF00DD55D2 /* Main.storyboard */,
 				F364A50A2B90AAB000DD55D2 /* Assets.xcassets */,
-				F364A50C2B90AAB000DD55D2 /* LaunchScreen.storyboard */,
-				F364A50F2B90AAB000DD55D2 /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F364A5162B90AB4000DD55D2 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F364A5172B90AB6E00DD55D2 /* RickAndMorty */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F364A5172B90AB6E00DD55D2 /* RickAndMorty */ = {
+			isa = PBXGroup;
+			children = (
+				F364A51B2B90ABB500DD55D2 /* Service */,
+				F364A5182B90AB8100DD55D2 /* Model */,
+				F364A5192B90AB8700DD55D2 /* View */,
+				F364A51A2B90AB9200DD55D2 /* ViewModel */,
 			);
 			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		F364A5182B90AB8100DD55D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F364A5252B90CE5200DD55D2 /* RickAndMortyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F364A5192B90AB8700DD55D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F37652742B91C36100F29ECD /* TableViewCell */,
+				F364A51C2B90ABD300DD55D2 /* RickAndMortyVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F364A51A2B90AB9200DD55D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3B86F4F2B91AE6F00AD6141 /* RickAndMortyVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F364A51B2B90ABB500DD55D2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F364A5232B90CE3F00DD55D2 /* RickAndMortyService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F37652742B91C36100F29ECD /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F37652752B91C39300F29ECD /* RickAndMortyTVC.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +168,11 @@
 			dependencies = (
 			);
 			name = RickAndMorty;
+			packageProductDependencies = (
+				F364A51F2B90AC9000DD55D2 /* SnapKit */,
+				F364A5282B90D14400DD55D2 /* Alamofire */,
+				F364A52B2B90D17100DD55D2 /* AlamofireImage */,
+			);
 			productName = RickAndMorty;
 			productReference = F364A4FE2B90AAAF00DD55D2 /* RickAndMorty.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +201,11 @@
 				Base,
 			);
 			mainGroup = F364A4F52B90AAAF00DD55D2;
+			packageReferences = (
+				F364A51E2B90AC9000DD55D2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F364A5272B90D14400DD55D2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F364A52A2B90D17100DD55D2 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = F364A4FF2B90AAAF00DD55D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F364A5262B90CE5200DD55D2 /* RickAndMortyModel.swift in Sources */,
+				F364A5242B90CE3F00DD55D2 /* RickAndMortyService.swift in Sources */,
 				F364A5062B90AAAF00DD55D2 /* ViewController.swift in Sources */,
+				F3B86F502B91AE6F00AD6141 /* RickAndMortyVM.swift in Sources */,
+				F37652762B91C39300F29ECD /* RickAndMortyTVC.swift in Sources */,
 				F364A5022B90AAAF00DD55D2 /* AppDelegate.swift in Sources */,
 				F364A5042B90AAAF00DD55D2 /* SceneDelegate.swift in Sources */,
+				F364A51D2B90ABD300DD55D2 /* RickAndMortyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +463,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F364A51E2B90AC9000DD55D2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		F364A5272B90D14400DD55D2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+		F364A52A2B90D17100DD55D2 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F364A51F2B90AC9000DD55D2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F364A51E2B90AC9000DD55D2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F364A5282B90D14400DD55D2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F364A5272B90D14400DD55D2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F364A52B2B90D17100DD55D2 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F364A52A2B90D17100DD55D2 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F364A4F62B90AAAF00DD55D2 /* Project object */;
 }
