@@ -31,6 +31,4 @@ struct RickAndMortyService: IRickAndMortyService {
             response(data.results)           
         }
     }
-    
-    
 }
