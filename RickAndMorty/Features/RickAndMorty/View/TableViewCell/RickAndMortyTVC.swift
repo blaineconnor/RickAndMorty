@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import SwiftUI
 
 class RickAndMortyTVC: UITableViewCell {
     
@@ -34,26 +35,26 @@ class RickAndMortyTVC: UITableViewCell {
         addSubview(title)
         addSubview(customDescription)
         title.font = .boldSystemFont(ofSize: 18)
-        self.backgroundColor = .brown
+        self.backgroundColor = .clear
         
-        customDescription.font = .italicSystemFont(ofSize: 10)
+        customDescription.font = .italicSystemFont(ofSize: 14)
         
         customImg.snp.makeConstraints { (make) in
             make.height.equalTo(100)
-            make.top.equalToSuperview()
-            make.leading.equalToSuperview()
+            make.top.equalToSuperview().offset(16)
+            make.leading.equalToSuperview().offset(-240)
             make.trailing.equalToSuperview()
         }
         
         title.snp.makeConstraints { (make) in
-            make.top.equalTo(customImg.snp.bottom).offset(10)
-            make.trailing.leading.equalToSuperview()
+            make.top.equalTo(customImg.snp.bottom).offset(16)
+            make.trailing.leading.equalToSuperview().offset(16)
         }
         
         customDescription.snp.makeConstraints { (make) in
-            make.top.equalTo(title.snp.bottom).offset(5)
+            make.top.equalTo(title.snp.bottom).offset(16)
             make.trailing.leading.equalTo(title)
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-16)
         }
         
         customImg.contentMode = .scaleAspectFit
@@ -66,4 +67,13 @@ class RickAndMortyTVC: UITableViewCell {
         customImg.af.setImage(withURL: URL(string: model.image ?? randomImg) ?? URL(string: randomImg)!)
     }
     
+}
+
+
+
+struct MortyViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        RickViewControllerRepresentable()
+            .edgesIgnoringSafeArea(.all)
+    }
 }

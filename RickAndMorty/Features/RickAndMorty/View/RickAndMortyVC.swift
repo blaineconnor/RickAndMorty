@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 protocol RickAndMortyOutput{
     func changeLoading(isLoad: Bool)
@@ -48,13 +49,13 @@ final class RickAndMortyVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(RickAndMortyTVC.self, forCellReuseIdentifier: RickAndMortyTVC.Identifier.custom.rawValue)
-        tableView.rowHeight = 150
+        tableView.rowHeight = 200
         
         DispatchQueue.main.async {
             self.view.backgroundColor = .white
             self.labelTitle.font = .boldSystemFont(ofSize: 25)
             self.labelTitle.text = "Rick and Morty"
-            self.indicator.color = .brown
+            self.indicator.color = .black
         }
         indicator.startAnimating()
     }
@@ -92,8 +93,8 @@ extension RickAndMortyVC: UITableViewDelegate, UITableViewDataSource {
 extension RickAndMortyVC {
     private func makeTableView(){
         tableView.snp.makeConstraints {(make) in
-            make.top.equalTo(labelTitle.snp.bottom).offset(10)
-            make.bottom.equalToSuperview().offset(-10)
+            make.top.equalTo(labelTitle.snp.bottom).offset(16)
+            make.bottom.equalToSuperview().offset(16)
             make.left.right.equalTo(labelTitle)
             
         }
@@ -101,17 +102,34 @@ extension RickAndMortyVC {
     private func makeLabel(){
         labelTitle.snp.makeConstraints { (make) in
             
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
-            make.left.equalTo(view).offset(10)
-            make.right.equalTo(view).offset(-10)
-            make.height.greaterThanOrEqualTo(10)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            make.left.equalTo(view).offset(16)
+            make.right.equalTo(view).offset(-16)
+            make.height.greaterThanOrEqualTo(16)
         }
     }
     private func makeIndicator(){
         indicator.snp.makeConstraints { (make) in
             make.height.equalTo(labelTitle)
-            make.right.equalTo(labelTitle).offset(-5)
+            make.right.equalTo(labelTitle).offset(-8)
             make.top.equalTo(labelTitle)
         }
+    }
+}
+
+
+struct RickViewControllerRepresentable: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> RickAndMortyVC {
+        return RickAndMortyVC()
+    }
+
+    func updateUIViewController(_ uiViewController: RickAndMortyVC, context: Context) {
+    }
+}
+
+struct RickViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        RickViewControllerRepresentable()
+            .edgesIgnoringSafeArea(.all)
     }
 }
