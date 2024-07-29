@@ -5,7 +5,6 @@
 //  Created by Fatih Emre Sarman on 29.02.2024.
 //
 
-import UIKit
 import SnapKit
 import SwiftUI
 

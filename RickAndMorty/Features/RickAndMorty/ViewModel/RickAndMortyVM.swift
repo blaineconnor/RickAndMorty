@@ -5,8 +5,6 @@
 //  Created by Fatih Emre Sarman on 1.03.2024.
 //
 
-import Foundation
-
 protocol IRickAndMortyVM {
     func fetchItems()
     func changeLoading()

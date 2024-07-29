@@ -5,7 +5,6 @@
 //  Created by Fatih Emre Sarman on 1.03.2024.
 //
 
-import UIKit
 import AlamofireImage
 import SwiftUI
 

@@ -28,7 +28,7 @@ struct RickAndMortyService: IRickAndMortyService {
                 response(nil)
                 return
             }
-            response(data.results)           
+            response(data.results)
         }
     }
 }
