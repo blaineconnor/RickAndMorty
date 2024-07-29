@@ -4,4 +4,4 @@
 
 
 ## Screen
-![Simulator Screenshot - iPhone 11 - 2024-07-29 at 11 52 24](https://github.com/user-attachments/assets/383ea616-f304-4ff1-8e09-7c14136603e1)
+<img src="https://github.com/user-attachments/assets/383ea616-f304-4ff1-8e09-7c14136603e1" alt="Simulator Screenshot - iPhone 11 - 2024-07-29 at 11 52 24" width="393"/>
